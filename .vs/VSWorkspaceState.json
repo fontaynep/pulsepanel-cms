@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Areas",
+    "\\Areas\\Identity",
+    "\\Areas\\Identity\\Pages",
+    "\\Areas\\Identity\\Pages\\Account",
+    "\\Pages",
+    "\\Pages\\PageContent",
+    "\\Pages\\Shared",
+    "\\wwwroot",
+    "\\wwwroot\\css"
+  ],
+  "SelectedNode": "\\Pages\\Shared\\_Layout.cshtml",
+  "PreviewInSolutionExplorer": false
+}

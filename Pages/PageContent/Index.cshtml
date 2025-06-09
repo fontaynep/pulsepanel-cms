@@ -1,0 +1,44 @@
+@page
+@model CustomCMS.Pages_PageContent.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1 style="font-weight:700; font-size:2.5rem;">
+    Pulse<span style="color:#FFB400;">Panel</span>
+</h1>
+<div class="container">
+    <div class="card">
+        <h1>Manage Content</h1>
+        <p>
+            <a class="btn btn-primary" asp-page="Create">+ Add New Block</a>
+        </p>
+        <table class="table custom-table">
+            <thead>
+                <tr>
+                    <th>Page</th>
+                    <th>Title</th>
+                    <th>Body</th>
+                    <th>Last Updated</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.PageContent)
+                {
+                <tr>
+                    <td>@item.PageName</td>
+                    <td>@item.Title</td>
+                    <td>@item.Body?.Substring(0, Math.Min(50, item.Body.Length))...</td>
+                    <td>@item.LastUpdated.ToShortDateString()</td>
+                    <td>
+                        <a asp-page="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-page="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-page="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

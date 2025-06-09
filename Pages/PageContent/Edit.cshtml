@@ -1,0 +1,51 @@
+@page
+@model CustomCMS.Pages_PageContent.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>PageContent</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PageContent.Id" />
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="PageContent.PageName" class="control-label"></label>
+                <input asp-for="PageContent.PageName" class="form-control" />
+                <span asp-validation-for="PageContent.PageName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="PageContent.Title" class="control-label"></label>
+                <input asp-for="PageContent.Title" class="form-control" />
+                <span asp-validation-for="PageContent.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="PageContent.Body" class="control-label"></label>
+                <textarea asp-for="PageContent.Body" class="form-control"></textarea>
+                <span asp-validation-for="PageContent.Body" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="PageContent.LastUpdated" class="control-label"></label>
+                <input asp-for="PageContent.LastUpdated" class="form-control" />
+                <span asp-validation-for="PageContent.LastUpdated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
