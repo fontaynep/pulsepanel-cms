@@ -1,0 +1,44 @@
+## Ignore build and output folders
+bin/
+obj/
+out/
+
+## Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Ignore database files
+*.db
+*.sqlite
+
+## Ignore secrets and configs
+appsettings.json
+appsettings.Development.json
+.env
+
+## Ignore VSCode settings (if using VSCode)
+.vscode/
+
+## Ignore publish artifacts
+*.publish/
+*.PublishTmp/
+
+## Ignore logs and diagnostic files
+*.log
+*.tlog
+
+## Ignore temporary files
+~$*
+*.tmp
+*.temp
+
+## Ignore OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## Optional: Node/npm stuff if you're using npm or bundlers
+node_modules/
+package-lock.json
